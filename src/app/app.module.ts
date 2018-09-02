@@ -1,3 +1,5 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,11 +14,13 @@ import { SafePipe } from './safe.pipe';
     AppComponent,
     SafePipe
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+    
     HttpClientModule
   ],
   providers: [GiphyService],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
