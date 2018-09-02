@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to serverless-conf-app!');
+    expect(page.getParagraphText()).toEqual('Our curated list of internet cats');
   });
 });
