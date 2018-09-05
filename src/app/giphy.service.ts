@@ -14,7 +14,7 @@ export interface GiphyResponse {
 @Injectable()
 export class GiphyService {
 
-  public readonly url:string = 'http://api.giphy.com/v1/gifs/search?api_key=lMcARQ917QgLIYCAym1Saw4YlYyVJulR&&limit=20&rating=g&lang=en';
+  public readonly url:string = 'https://api.giphy.com/v1/gifs/search?api_key=lMcARQ917QgLIYCAym1Saw4YlYyVJulR&&limit=20&rating=g&lang=en';
 
   constructor(private http: HttpClient) { }
 
