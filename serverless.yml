@@ -26,14 +26,30 @@ package:
    - '!node_modules/mime-types/**'
    - '!node_modules/mime-db/**'
 
-custom:
-  apigwBinary:
-    types:
-      - '*/*'
-
 functions:
   api:
     handler: lambda.universal
     events:
       - http: ANY {proxy+}
       - http: ANY /
+
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
+  stages:
+    - dev
+    - staging
+    - prod
+  domain:
+    dev: localhost
+    staging: serverless-conf-staging.10ten.ae
+    prod: serverless-conf.10ten.ae
+  zone:
+    dev: localhost
+    staging: "ZCXVCBVNBMGILHIOIHIO"
+    prod: "ALSKDJFHGFJFJFKIFOI"
+  certificate:
+    dev: ""
+    staging: "arn:aws:acm:us-east-1:XXXX"
+    prod: "arn:aws:acm:us-east-1:XXXX"

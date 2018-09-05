@@ -28,6 +28,14 @@
             "scripts": []
           },
           "configurations": {
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -102,6 +110,14 @@
           },
           "configurations": {
             "serverless": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.serverless.ts"
+                }
+              ]
+            },
+            "serverless-staging": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
