@@ -3,5 +3,15 @@
     "skipInstall": false,
     "directory": ".",
     "project": "serverless-conf-app"
+  },
+  "serverless": {
+    "provider": "aws",
+    "skipInstall": false,
+    "directory": ".",
+    "project": "serverless-conf-app",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
   }
 }
